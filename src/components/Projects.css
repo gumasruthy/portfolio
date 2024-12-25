@@ -1,0 +1,149 @@
+/* Projects.css */
+
+/* Container Styles */
+.projects-container {
+  text-align: center;
+  padding: 80px 40px;
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  scroll-margin-top: 60px;
+}
+
+/* Section Headers */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Project Details */
+.timeline {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.summary {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Skills Display */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Button Styles */
+.show-more-button {
+  margin: 30px 0;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+.project-media {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Make sure the video container maintains proper dimensions */
+.project-card video.project-media {
+  background: #000; /* Add a black background for video loading */
+  max-height: 220px; /* Maintain consistent height with images */
+}
